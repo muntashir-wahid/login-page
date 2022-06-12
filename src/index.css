@@ -1,14 +1,16 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 html {
-  font-size: 62.5%;
-  background-color: white;
+  font-family: sans-serif;
+  background: #fff;
 }
 
 body {
-  font-size: 1.6rem;
+  margin: 0;
+}
+
+main {
+  margin-top: 6rem;
 }
