@@ -1,0 +1,41 @@
+.login-form {
+  margin: 2.4rem 1.8rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  gap: 1.8rem;
+}
+
+.form-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.form-control input {
+  padding: 0.8rem;
+  width: 70%;
+  border: 1px solid black;
+  border-radius: 0.6rem;
+  outline: none;
+}
+
+.form-control input:focus {
+  background-color: rgba(76, 0, 130, 0.137);
+  border-color: var(--primary-color);
+}
+
+.form-control label {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.form-control__btn {
+  justify-self: center;
+  width: 14rem;
+}
+
+.form-control.invalid input {
+  background-color: rgba(255, 0, 0, 0.068);
+  border-color: red;
+}

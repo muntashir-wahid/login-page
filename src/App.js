@@ -1,10 +1,13 @@
-import "./App.css";
+import React from "react";
+import Header from "./Header/Header";
+import LoginForm from "./LoginForm/LoginForm";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Let's start working on the login page</h1>
-    </div>
+    <React.Fragment>
+      <Header />
+      <LoginForm />
+    </React.Fragment>
   );
 }
 
