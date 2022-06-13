@@ -43,45 +43,43 @@ const LoginForm = function (props) {
   };
 
   return (
-    <main>
-      <Card>
-        <form className={styles["login-form"]} onSubmit={formSubmitHandler}>
-          <div
-            className={`${styles["form-control"]} ${
-              !isValidEmail && styles.invalid
-            }`}
-          >
-            <label htmlFor="email">E-Mail</label>
-            <input
-              type="email"
-              id="email"
-              value={enteredEmail}
-              onChange={emailChangeHandler}
-              onBlur={emailValidationHandler}
-            />
-          </div>
-          <div
-            className={`${styles["form-control"]} ${
-              !isValidPassword && styles.invalid
-            }`}
-          >
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              value={enteredPassword}
-              onChange={passwordChangeHandler}
-              onBlur={passwordValidationHandler}
-            />
-          </div>
-          <div className={styles["form-control__btn"]}>
-            <Button type={"submit"} disabled={!isFormValid}>
-              Login
-            </Button>
-          </div>
-        </form>
-      </Card>
-    </main>
+    <Card>
+      <form className={styles["login-form"]} onSubmit={formSubmitHandler}>
+        <div
+          className={`${styles["form-control"]} ${
+            !isValidEmail && styles.invalid
+          }`}
+        >
+          <label htmlFor="email">E-Mail</label>
+          <input
+            type="email"
+            id="email"
+            value={enteredEmail}
+            onChange={emailChangeHandler}
+            onBlur={emailValidationHandler}
+          />
+        </div>
+        <div
+          className={`${styles["form-control"]} ${
+            !isValidPassword && styles.invalid
+          }`}
+        >
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            value={enteredPassword}
+            onChange={passwordChangeHandler}
+            onBlur={passwordValidationHandler}
+          />
+        </div>
+        <div className={styles["form-control__btn"]}>
+          <Button type={"submit"} disabled={!isFormValid}>
+            Login
+          </Button>
+        </div>
+      </form>
+    </Card>
   );
 };
 

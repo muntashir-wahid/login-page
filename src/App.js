@@ -15,11 +15,13 @@ function App() {
   return (
     <React.Fragment>
       <Header confirmLogedIn={isLogedIn} onConfirmLogOut={userLogOutHandler} />
-      {isLogedIn ? (
-        <Home />
-      ) : (
-        <LoginForm onConfirmLogin={loginConfirmHandler} />
-      )}
+      <main>
+        {isLogedIn ? (
+          <Home />
+        ) : (
+          <LoginForm onConfirmLogin={loginConfirmHandler} />
+        )}
+      </main>
     </React.Fragment>
   );
 }
