@@ -37,10 +37,9 @@ const LoginForm = function (props) {
   const formSubmitHandler = function (e) {
     e.preventDefault();
     const userInfo = { userEmail: enteredEmail, password: enteredPassword };
-    console.log(userInfo);
     setEnteredEmail("");
     setEnteredPassword("");
-    setIsFormValid(false);
+    props.onConfirmLogin(isFormValid);
   };
 
   return (

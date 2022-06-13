@@ -1,12 +1,25 @@
-import React from "react";
-import Header from "./Header/Header";
-import LoginForm from "./LoginForm/LoginForm";
+import React, { useState } from "react";
+import Header from "./components/Header/Header";
+import LoginForm from "./components/LoginForm/LoginForm";
+import Home from "./components/Home/Home";
 
 function App() {
+  const [isLogedIn, setIsLogedIn] = useState(false);
+  const loginConfirmHandler = function (isLogIn) {
+    setIsLogedIn(isLogIn);
+  };
+
+  const userLogOutHandler = function (isLogedOut) {
+    setIsLogedIn(!isLogedOut);
+  };
   return (
     <React.Fragment>
-      <Header />
-      <LoginForm />
+      <Header confirmLogedIn={isLogedIn} onConfirmLogOut={userLogOutHandler} />
+      {isLogedIn ? (
+        <Home />
+      ) : (
+        <LoginForm onConfirmLogin={loginConfirmHandler} />
+      )}
     </React.Fragment>
   );
 }

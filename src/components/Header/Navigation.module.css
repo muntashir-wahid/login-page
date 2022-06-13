@@ -1,0 +1,25 @@
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.6rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.8rem;
+  display: block;
+}
+
+.nav-links a:hover {
+  color: rgb(158, 158, 158);
+}
+
+.nav-links .logout-btn {
+  background-color: var(--secondary-color);
+  padding: .8rem 1.6rem;
+  border-radius: 22rem;
+  text-align: center;
+}

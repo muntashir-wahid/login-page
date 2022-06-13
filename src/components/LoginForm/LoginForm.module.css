@@ -1,5 +1,4 @@
 .login-form {
-  margin: 2.4rem 1.8rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, auto);

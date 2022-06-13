@@ -1,0 +1,11 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message {
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin: 1.2rem;
+}
