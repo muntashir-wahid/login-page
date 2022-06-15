@@ -39,7 +39,7 @@ const LoginForm = function (props) {
     const userInfo = { userEmail: enteredEmail, password: enteredPassword };
     setEnteredEmail("");
     setEnteredPassword("");
-    props.onConfirmLogin(isFormValid);
+    props.onConfirmLogin(isFormValid, userInfo);
   };
 
   return (
