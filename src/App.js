@@ -6,21 +6,14 @@ import MainHeader from "./components/MainHeader/MainHeader";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  useEffect(() => {
-    const storedUserLogedInInfo = localStorage.getItem("isLogedIn");
-    if (storedUserLogedInInfo === "1") {
-      setIsLoggedIn(true);
-    }
-  }, []);
+  // useEffect(() => {
+  // })
 
   const loginHandler = (email, password) => {
-    localStorage.setItem("isLogedIn", "1");
     setIsLoggedIn(true);
   };
 
   const logoutHandler = () => {
-    localStorage.removeItem("isLogedIn");
     setIsLoggedIn(false);
   };
 
