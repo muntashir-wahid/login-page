@@ -7,12 +7,23 @@ import MainHeader from "./components/MainHeader/MainHeader";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  useEffect(() => {
+    console.log("Side effect code runs!!");
 
+    const storedUserLoggedInInfo = localStorage.getItem("isLoggedIn");
+    if (storedUserLoggedInInfo === "1") {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  console.log("App component function runs again");
   const loginHandler = (email, password) => {
+    localStorage.setItem("isLoggedIn", "1");
     setIsLoggedIn(true);
   };
 
   const logoutHandler = () => {
+    localStorage.removeItem("isLoggedIn");
     setIsLoggedIn(false);
   };
 
