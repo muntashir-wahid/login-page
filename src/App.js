@@ -36,7 +36,7 @@ function App() {
       <MainHeader />
       <main>
         {!isLoggedIn && <Login onLogin={loginHandler} />}
-        {isLoggedIn && <Home />}
+        {isLoggedIn && <Home onLogout={logoutHandler} />}
       </main>
     </AuthContext.Provider>
   );

@@ -72,7 +72,7 @@ const Login = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    ctx.onLogin(emailState.value, passwordState.value);
+    props.onLogin(emailState.value, passwordState.value);
   };
 
   return (
